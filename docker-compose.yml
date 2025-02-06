@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  secure-rest-api-tutorial-database:
+    container_name: secure-rest-api-tutorial-database
+    image: mongo:7.0
+    restart: always
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin  
+      - MONGO_INITDB_ROOT_PASSWORD=admin  
+      - MONGO_INITDB_DATABASE=secure-rest-api  
